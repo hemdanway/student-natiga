@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة الطالب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            direction: rtl;
+            text-align: center;
+        }
+
+        .login-container {
+            margin-top: 50px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .result-img {
+            display: none;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function checkCredentials() {
+            var studentCode = document.getElementById("studentCode").value;
+            var password = document.getElementById("password").value;
+
+            // التأكد من الكود وكلمة السر
+            if (studentCode === "29112024101352" && password === "30608151300858") {
+                document.getElementById("resultImage").style.display = "block";  // إظهار الصورة
+            } else {
+                alert("الكود أو كلمة السر غلط.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>خدمات التسجيل الإلكتروني - جامعة الزقازيق</h1>
+
+    <div class="login-container">
+        <h2>بيانات الدخول</h2>
+        <input type="text" id="studentCode" placeholder="كود الطالب">
+        <input type="password" id="password" placeholder="كلمة السر">
+        <button onclick="checkCredentials()">تسجيل دخول</button>
+    </div>
+
+    <!-- الصورة المخفية -->
+    <img id="resultImage" class="result-img" src="images/result.jpg" alt="نتيجة الطالب">
+
+</body>
+          </html>
